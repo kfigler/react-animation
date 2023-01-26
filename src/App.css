@@ -1,38 +1,107 @@
-.App {
-  text-align: center;
+.fullscreen {
+  height: 100vh;
+  width: 100vw;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex-container {
   display: flex;
-  flex-direction: column;
+}
+
+.flex-container.center {
+  justify-content: center;
+}
+
+.flex-container.vertical-center {
+  align-items: center;
+}
+
+.flex-container.horizontal-center {
+  align-items: center;
+}
+
+.background-image {
+  background-image: url('../public/housekeeping-concept-with-cleaning-products.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+}
+
+.blue-gradient {
+  background-image: url();
+  /* background-color: #74EBD5;
+  background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%); */
+}
+
+.orange-gradient {
+  background-color: #FAD961;
+  background-image: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);
+}
+
+/* Source: https://blog.avada.io/css/close-buttons */
+div.button {
+  height: 40px;
+  width: 40px;
+  position: relative;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+div.button div.line {
+  width: 5px;
+  height: 32px;
+  background: #fff;
+  border-radius: 3px;
+  display: block;
+  position: absolute;
+  top: 0;
+  transition: all 0.3s cubic-bezier(0.87, 0.39, 0.74, 1.31);
+}
+
+div.button div.line.left {
+  transform: rotateZ(45deg);
+  -webkit-transform: rotateZ(45deg);
+  left: 20px;
+}
+
+div.button div.line.right {
+  transform: rotateZ(-45deg);
+  -webkit-transform: rotateZ(-45deg);
+  left: 20px;
+}
+
+div.button.open div.line.left {
+  left: 10px;
+}
+
+div.button.open div.line.right {
+  left: 30px;
+}
+
+.nav-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav-item {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 33%;
+  height: 100vh;
+  margin: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 45vh
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header h1, h3 {
+  margin: 0;
+  text-align: center;
 }
